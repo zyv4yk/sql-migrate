@@ -7,4 +7,4 @@ OPTIONS="-config=test-integration/dbconfig.yml -env mysql_noflag"
 
 set -ex
 
-sql-migrate status $OPTIONS | grep -q "Make sure that the parseTime option is supplied"
+sql-migrate status $OPTIONS | grep -q "Make sure that the parseTime option is supplied to your database connection."
