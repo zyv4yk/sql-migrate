@@ -1,3 +1,4 @@
+version: '1.64'
 linters-settings:
   gocritic:
     disabled-checks:
