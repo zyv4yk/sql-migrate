@@ -30,8 +30,6 @@ linters-settings:
 
   nolintlint:
     allow-unused: false
-    allow-no-explanation:
-      - depguard
     require-explanation: true
     require-specific: true
 
