@@ -10,7 +10,7 @@ mysql:
 
 mysql_noflag:
     dialect: mysql
-    datasource: root@/test?parseTime=true
+    datasource: root@/test?parseTime=false
     dir: test-migrations
 
 mysql_env:
