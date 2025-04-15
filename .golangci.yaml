@@ -2,17 +2,20 @@ linters-settings:
   gocritic:
     disabled-checks:
       - ifElseChain
+
   goimports:
     local-prefixes: github.com/rubenv/sql-migrate
+
   govet:
     enable-all: true
     disable:
       - fieldalignment
+
   depguard:
     rules:
       main:
         allow:
-          - $gostd
+          - $GOSTD
           - github.com/denisenkom/go-mssqldb
           - github.com/go-sql-driver/mysql
           - github.com/go-gorp/gorp/v3
@@ -21,15 +24,17 @@ linters-settings:
           - github.com/mitchellh/cli
           - github.com/olekukonko/tablewriter
           - github.com/rubenv/sql-migrate
+
   exhaustive:
     default-signifies-exhaustive: true
+
   nolintlint:
     allow-unused: false
-    allow-leading-space: false
     allow-no-explanation:
       - depguard
     require-explanation: true
     require-specific: true
+
   revive:
     enable-all-rules: false
     rules:
@@ -50,7 +55,7 @@ linters-settings:
       - name: errorf
       - name: exported
       - name: identical-branches
-      - name: imports-blacklist
+      - name: imports-blocklist
       - name: increment-decrement
       - name: indent-error-flow
       - name: modifies-parameter
@@ -74,9 +79,11 @@ linters-settings:
       - name: unused-receiver
       - name: unnecessary-stmt
       - name: unused-parameter
+
 run:
   tests: true
   timeout: 1m
+
 linters:
   disable-all: true
   enable:
@@ -99,9 +106,10 @@ linters:
     - errorlint
     - gosimple
     - unparam
+
 issues:
   exclude:
-    - 'declaration of "err" shadows declaration at' # Allow shadowing of `err` because it's so common
+    - 'declaration of "err" shadows declaration at'
     - 'error-strings: error strings should not be capitalized or end with punctuation or a newline'
   max-same-issues: 10000
   max-issues-per-linter: 10000
