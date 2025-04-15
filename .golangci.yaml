@@ -14,8 +14,8 @@ linters-settings:
   depguard:
     rules:
       main:
-        allowStd: true
         allow:
+          - $gostd
           - github.com/denisenkom/go-mssqldb
           - github.com/go-sql-driver/mysql
           - github.com/go-gorp/gorp/v3
